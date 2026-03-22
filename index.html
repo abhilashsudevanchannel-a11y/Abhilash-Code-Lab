@@ -3,123 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Abhilash Sudevan | Pro Code Studio</title>
+    
+    <title>Abhilash Sudevan | Integrated Web & Social Media Solutions</title>
+    <meta name="description" content="Professional Web Design and Strategic Social Media Management. We handle your complete digital presence from technical SEO to social ecosystem growth.">
+    <meta name="keywords" content="Web Design, Social Media Management Kerala, Digital Ecosystem, Technical SEO, Content Strategy, Abhilash Sudevan">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
-            --primary: #d63384;
-            --bg: #0d1117;
-            --panel: #161b22;
-            --text: #c9d1d9;
+            --bg: #ffffff;
+            --text: #1d1d1f;
+            --blue: #0071e3;
+            --grey: #86868b;
+            --light-grey: #f5f5f7;
+            --accent-bg: #fbfbfd;
         }
 
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            margin: 0; 
-            background: var(--bg); 
-            display: flex; 
-            flex-direction: column; 
-            height: 100vh;
-            overflow: hidden;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
-        .header { 
-            background: var(--panel); 
-            padding: 10px; 
-            text-align: center; 
-            border-bottom: 2px solid var(--primary);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-        .container { 
-            display: flex; 
-            flex-direction: column; 
-            flex: 1; 
-            padding: 5px;
-            overflow-y: auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
 
-        .section-label {
-            background: #21262d;
-            padding: 8px;
-            font-size: 12px;
-            color: var(--primary);
-            font-weight: bold;
-            border: 1px solid #30363d;
-            border-radius: 5px 5px 0 0;
-            display: flex;
-            justify-content: space-between;
-        }
+        /* Hero Section */
+        header { text-align: center; padding: 80px 0; }
+        .badge { background: #e8f0fe; color: var(--blue); padding: 8px 16px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+        h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -2px; margin: 25px 0; line-height: 1.1; }
+        .hero-p { font-size: 1.25rem; color: var(--grey); max-width: 650px; margin: 0 auto 40px; }
 
-        textarea { 
-            width: 100%;
-            height: 300px; /* മൊബൈലിൽ കൂടുതൽ സ്ഥലം ലഭിക്കാൻ */
-            background: #010409; 
-            color: #79c0ff; 
-            border: 1px solid #30363d; 
-            border-radius: 0 0 5px 5px;
-            padding: 10px; 
-            font-family: 'Consolas', monospace; 
-            font-size: 14px;
-            resize: vertical;
-            outline: none;
-            box-sizing: border-box;
-        }
+        /* Feature Grid */
+        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 40px; text-align: center; letter-spacing: -1px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 80px; }
+        .service-card { background: var(--accent-bg); padding: 45px; border-radius: 28px; border: 1px solid #f0f0f2; transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-8px); border-color: var(--blue); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .icon-box { font-size: 2.2rem; color: var(--blue); margin-bottom: 25px; }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 600; }
+        .service-card p { color: var(--grey); font-size: 1.05rem; }
 
-        .preview-label {
-            background: #27ae60;
-            color: white;
-            padding: 8px;
-            font-size: 12px;
-            margin-top: 10px;
-            border-radius: 5px 5px 0 0;
-        }
+        /* Evening/Maintenance Support Section */
+        .support-banner { background: #1d1d1f; color: #fff; padding: 60px 40px; border-radius: 32px; display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 80px; }
+        .support-content h2 { font-size: 2rem; margin-bottom: 10px; color: #fff; text-align: left; }
+        .support-content p { color: #a1a1a6; font-size: 1.1rem; }
+        .support-status { background: #323232; padding: 10px 20px; border-radius: 12px; border: 1px solid #424245; }
+        .status-dot { height: 10px; width: 10px; background: #30d158; border-radius: 50%; display: inline-block; margin-right: 8px; box-shadow: 0 0 10px #30d158; }
 
-        iframe { 
-            width: 100%;
-            height: 300px;
-            background: white; 
-            border: 1px solid #30363d; 
-            border-radius: 0 0 5px 5px;
-            box-sizing: border-box;
+        /* Articles/Blog Section */
+        .article-list { margin-bottom: 80px; }
+        .article-item { padding: 30px 0; border-bottom: 1px solid var(--light-grey); transition: 0.3s; }
+        .article-item:hover { padding-left: 10px; }
+        .article-item span { color: var(--blue); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+        .article-item h4 { font-size: 1.4rem; margin: 10px 0; }
+        .article-item p { color: var(--grey); font-size: 1rem; }
+
+        /* CTA */
+        .cta-final { text-align: center; padding: 60px 0; }
+        .btn-blue { display: inline-block; background: var(--blue); color: #fff; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: 0.3s; }
+        .btn-blue:hover { transform: scale(1.03); background: #0077ed; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--light-grey); color: var(--grey); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .support-banner { flex-direction: column; text-align: center; }
+            .support-content h2 { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-<div class="header">ABHILASH PRO STUDIO</div>
+    <div class="container">
+        <header>
+            <span class="badge">Full-Stack Digital Management</span>
+            <h1>Your Website & Social Ecosystem, Managed.</h1>
+            <p class="hero-p">We provide end-to-end digital solutions, from technical web architecture to strategic social media growth—handling the complexities while you grow your business.</p>
+            <a href="mailto:abhilashsudevan.channel@gmail.com" class="btn-blue">Start Consultation</a>
+        </header>
 
-<div class="container">
-    <div class="section-label">EDITOR (WRITE CODE HERE)</div>
-    <textarea id="fullCode" oninput="update()" spellcheck="false"><!DOCTYPE html>
-<html>
-<head>
-<style>
-  body { text-align: center; }
-  h1 { color: #d63384; }
-</style>
-</head>
-<body>
-  <h1>Hello Abhilash!</h1>
-  <p>Start coding here.</p>
-</body>
-</html></textarea>
+        <section>
+            <h2 class="section-title">Core Specialized Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-code"></i></div>
+                    <h3>Bespoke Web Design</h3>
+                    <p>Clean, high-performance websites built with semantic code for SEO superiority and mobile responsiveness.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-share-nodes"></i></div>
+                    <h3>Social Integration</h3>
+                    <p>Connecting your website to your social platforms through API integrations, tracking pixels, and unified branding.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Growth Strategy</h3>
+                    <p>Custom content roadmaps designed to turn search engine traffic and social followers into loyal customers.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="preview-label">LIVE PREVIEW</div>
-    <iframe id="output"></iframe>
-</div>
+        <section class="support-banner">
+            <div class="support-content">
+                <h2>Evening Support & Management</h2>
+                <p>Dedicated digital maintenance and social management during peak engagement hours.</p>
+            </div>
+            <div class="support-status">
+                <span class="status-dot"></span> <span style="font-weight: 500;">Active 6 PM - 12 AM</span>
+            </div>
+        </section>
 
-<script>
-    function update() {
-        const code = document.getElementById("fullCode").value;
-        const output = document.getElementById("output").contentWindow.document;
-        output.open();
-        output.write(code);
-        output.close();
-    }
-    window.onload = update;
-</script>
+        <section class="article-list">
+            <h2 class="section-title">Digital Insights</h2>
+            
+            <div class="article-item">
+                <span>Case Study</span>
+                <h4>The Power of Unified Brand Identity</h4>
+                <p>Why synchronizing your website design with your social media presence increases customer trust by 40%.</p>
+            </div>
+
+            <div class="article-item">
+                <span>Technical SEO</span>
+                <h4>Website Speed & Social Conversion</h4>
+                <p>Understanding how technical backend performance affects your social media advertisement ROI.</p>
+            </div>
+
+            <div class="article-item">
+                <span>Maintenance</span>
+                <h4>Why Daily Digital Oversight Matters</h4>
+                <p>The importance of monitoring your digital assets during high-traffic evening hours to prevent downtime.</p>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <h2>Ready to automate your digital growth?</h2>
+            <p style="color: var(--grey); margin-bottom: 30px;">Let us handle the technical side while you focus on the business.</p>
+            <a href="mailto:abhilashsudevan.channel@gmail.com" class="btn-blue">Get a Quote Today</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Abhilash Sudevan. Integrated Web & Social Media Management.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
